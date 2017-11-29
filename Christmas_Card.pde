@@ -19,15 +19,16 @@ void draw() {
   fill(255,0,0);//we fill following with red  
   ellipse(random(width),random(height),10,10);//randomly placed circle 
 
-//  if (record) {
-//    endRecord();
-//  record = false;
-//  }
+  if (record) {
+    endRecord();
+    record = false;
+  }
 }
 
 // Use a keypress so thousands of files aren't created
 void keyPressed() {
-  //record = true;
-  noLoop();
+  record = true;
+  //noLoop();
   endRecord();
+  //redraw();
 }
