@@ -19,7 +19,7 @@ PShape star4;
 void setup() {
   size(431, 304);
   beginRecord(PDF, "holly-####.pdf");
-  background(#F0DAA0);
+  background(#EDD7A0);
   holly1 = loadShape("holly1.svg");
   holly2 = loadShape("holly2.svg");
   holly3 = loadShape("holly3.svg");
@@ -36,10 +36,12 @@ void setup() {
   star2 = loadShape("star2.svg");
   star3 = loadShape("star3.svg");
   star4 = loadShape("star4.svg");
+  noLoop();
 }
 
 void draw() {
   // Draw something good here
+  pushMatrix();
   shapeMode(CENTER);
   for (int i = 0; i < 6; i = i+1) {
     shape(holly1, random(width),random(height));
@@ -58,9 +60,11 @@ void draw() {
     shape(star3, random(width),random(height));
     shape(star4, random(width),random(height));  
   }
-  noLoop();
+  pushMatrix();
+  //noLoop();
   //fill(255,0,0);//we fill following with red  
   //ellipse(random(width),random(height),10,10);//randomly placed circle 
+
 }
 
 // Use a keypress so thousands of files aren't created
