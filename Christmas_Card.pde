@@ -11,7 +11,10 @@ void setup() {
 void draw() {
   // Draw something good here
   shapeMode(CENTER);
-  shape(holly1, random(width),random(height));
+  for (int i = 0; i < 5; i = i+1) {
+    shape(holly1, random(width),random(height));
+  }
+  noLoop();
   //fill(255,0,0);//we fill following with red  
   //ellipse(random(width),random(height),10,10);//randomly placed circle 
 }
