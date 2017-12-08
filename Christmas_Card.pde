@@ -54,7 +54,7 @@ void setup() {
 
 void draw() {
   if (record) {
-    beginRecord(PDF, "new-####.pdf");
+    beginRecord(PDF, "neue-####.pdf");
   }
   if (keyPressed) {
     if (key == ' ') {
@@ -102,7 +102,71 @@ void keyPressed() {
 void pattern() {
         background(#EDD7A0);
         shapeMode(CENTER);
-        for (int i = 0; i < 6; i = i+1) {
+        for (int i = 0; i < 1; i = i+1) {
+          shape(holly1, 144,random(height));
+          shape(holly2, 144,random(height));
+          shape(holly3, 144,random(height));
+          shape(mist1, 144,random(height));
+          shape(mist2, 144,random(height));
+          shape(star1, 144,random(height));
+          shape(star2, 144,random(height));
+          shape(star3, 144,random(height));
+          shape(star4, 144,random(height));
+          holly1.rotate(random(360));
+          holly2.rotate(random(360));
+          holly3.rotate(random(360));
+          mist1.rotate(random(360));
+          mist2.rotate(random(360));
+        }
+        for (int i = 0; i < 1; i = i+1) {
+          shape(holly1, random(width),101);
+          shape(holly2, random(width),101);
+          shape(holly3, random(width),101);
+          shape(mist1, random(width),101);
+          shape(mist2, random(width),101);
+          shape(star1, random(width),101);
+          shape(star2, random(width),101);
+          shape(star3, random(width),101);
+          shape(star4, random(width),101);
+          holly1.rotate(random(360));
+          holly2.rotate(random(360));
+          holly3.rotate(random(360));
+          mist1.rotate(random(360));
+          mist2.rotate(random(360));
+        }
+        for (int i = 0; i < 1; i = i+1) {
+          shape(holly1, 287,random(height));
+          shape(holly2, 287,random(height));
+          shape(holly3, 287,random(height));
+          shape(mist1, 287,random(height));
+          shape(mist2, 287,random(height));
+          shape(star1, 287,random(height));
+          shape(star2, 287,random(height));
+          shape(star3, 287,random(height));
+          shape(star4, 287,random(height));
+          holly1.rotate(random(360));
+          holly2.rotate(random(360));
+          holly3.rotate(random(360));
+          mist1.rotate(random(360));
+          mist2.rotate(random(360));
+        }
+        for (int i = 0; i < 1; i = i+1) {
+          shape(holly1, random(width),203);
+          shape(holly2, random(width),203);
+          shape(holly3, random(width),203);
+          shape(mist1, random(width),203);
+          shape(mist2, random(width),203);
+          shape(star1, random(width),203);
+          shape(star2, random(width),203);
+          shape(star3, random(width),203);
+          shape(star4, random(width),203);
+          holly1.rotate(random(360));
+          holly2.rotate(random(360));
+          holly3.rotate(random(360));
+          mist1.rotate(random(360));
+          mist2.rotate(random(360));
+        }
+          for (int i = 0; i < 3; i = i+1) {
           shape(holly1, random(width),random(height));
           shape(holly2, random(width),random(height));
           shape(holly3, random(width),random(height));
@@ -112,8 +176,13 @@ void pattern() {
           shape(star2, random(width),random(height));
           shape(star3, random(width),random(height));
           shape(star4, random(width),random(height));
-        }
-        for (int i = 0; i < 5; i = i+1) {
+          holly1.rotate(random(360));
+          holly2.rotate(random(360));
+          holly3.rotate(random(360));
+          mist1.rotate(random(360));
+          mist2.rotate(random(360));
+          }
+        for (int i = 0; i < 2; i = i+1) {
           shape(star1, random(width),random(height));
           shape(star2, random(width),random(height));
           shape(star3, random(width),random(height));
