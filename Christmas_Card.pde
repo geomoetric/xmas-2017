@@ -17,7 +17,11 @@ PShape star2;
 PShape star3;
 PShape star4;
 
+PVector p1, p2, p3, p4;
+
 boolean record;
+
+PShape fig;
 
 void setup() {
   size(431, 304);
@@ -38,21 +42,39 @@ void setup() {
   star2 = loadShape("star2.svg");
   star3 = loadShape("star3.svg");
   star4 = loadShape("star4.svg");
+
+  p1 = new PVector(144, 101);
+  p2 = new PVector(287, 101);
+  p3 = new PVector(287, 203);
+  p4 = new PVector(144, 203);
+
+  fig = fig7;
   //noLoop();
 }
 
 void draw() {
   if (record) {
-    beginRecord(PDF, "testo2-####.pdf");
+    beginRecord(PDF, "testo3-####.pdf");
   }
-  // Draw something good here
-  //noLoop();
-  //fill(255,0,0);//we fill following with red  
-  //ellipse(random(width),random(height),10,10);//randomly placed circle
   if (keyPressed) {
     if (key == ' ') {
       pattern();
       }
+    if (key == 'q') {
+      shape(fig, p1.x, p1.y);
+      }
+    if (key == 'w') {
+      shape(fig, p2.x, p2.y);
+      }
+    if (key == 's') {
+      shape(fig, p3.x, p3.y);
+      }
+    if (key == 'a') {
+      shape(fig, p4.x, p4.y);
+      }
+
+
+
    }
    
     if (record) {
