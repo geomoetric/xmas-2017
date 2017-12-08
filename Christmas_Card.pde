@@ -54,22 +54,26 @@ void setup() {
 
 void draw() {
   if (record) {
-    beginRecord(PDF, "testo3-####.pdf");
+    beginRecord(PDF, "new-####.pdf");
   }
   if (keyPressed) {
     if (key == ' ') {
       pattern();
       }
     if (key == 'q') {
+      pattern();
       shape(fig, p1.x, p1.y);
       }
     if (key == 'w') {
+      pattern();
       shape(fig, p2.x, p2.y);
       }
     if (key == 's') {
+      pattern();
       shape(fig, p3.x, p3.y);
       }
     if (key == 'a') {
+      pattern();
       shape(fig, p4.x, p4.y);
       }
 
