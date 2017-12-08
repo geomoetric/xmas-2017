@@ -41,34 +41,42 @@ void setup() {
 
 void draw() {
   // Draw something good here
-  pushMatrix();
-  shapeMode(CENTER);
-  for (int i = 0; i < 6; i = i+1) {
-    shape(holly1, random(width),random(height));
-    shape(holly2, random(width),random(height));
-    shape(holly3, random(width),random(height));
-    shape(mist1, random(width),random(height));
-    shape(mist2, random(width),random(height));
-    shape(star1, random(width),random(height));
-    shape(star2, random(width),random(height));
-    shape(star3, random(width),random(height));
-    shape(star4, random(width),random(height));
-  }
-  for (int i = 0; i < 5; i = i+1) {
-    shape(star1, random(width),random(height));
-    shape(star2, random(width),random(height));
-    shape(star3, random(width),random(height));
-    shape(star4, random(width),random(height));  
-  }
-  pushMatrix();
   //noLoop();
   //fill(255,0,0);//we fill following with red  
-  //ellipse(random(width),random(height),10,10);//randomly placed circle 
-
+  //ellipse(random(width),random(height),10,10);//randomly placed circle
+  if (keyPressed) {
+    if (key == ' ') {
+       pushMatrix();
+        shapeMode(CENTER);
+        for (int i = 0; i < 6; i = i+1) {
+          shape(holly1, random(width),random(height));
+          shape(holly2, random(width),random(height));
+          shape(holly3, random(width),random(height));
+          shape(mist1, random(width),random(height));
+          shape(mist2, random(width),random(height));
+          shape(star1, random(width),random(height));
+          shape(star2, random(width),random(height));
+          shape(star3, random(width),random(height));
+          shape(star4, random(width),random(height));
+        }
+        for (int i = 0; i < 5; i = i+1) {
+          shape(star1, random(width),random(height));
+          shape(star2, random(width),random(height));
+          shape(star3, random(width),random(height));
+          shape(star4, random(width),random(height));  
+        }
+        pushMatrix();
+      }
+    }
 }
 
-// Use a keypress so thousands of files aren't created
 void keyPressed() {
-   endRecord();
-   setup();
+ if (key == 's' || key == 'S') {
+       endRecord();
+       setup();
+  }
+// Use a keypress so thousands of files aren't created
+//void keyPressed() {
+//   endRecord();
+//   setup();
 }
