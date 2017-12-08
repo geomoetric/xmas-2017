@@ -1,4 +1,5 @@
 import processing.pdf.*;
+
 PShape holly1;
 PShape holly2;
 PShape holly3;
@@ -16,9 +17,10 @@ PShape star2;
 PShape star3;
 PShape star4;
 
+boolean record;
+
 void setup() {
   size(431, 304);
-  beginRecord(PDF, "holly-####.pdf");
   background(#EDD7A0);
   holly1 = loadShape("holly1.svg");
   holly2 = loadShape("holly2.svg");
@@ -40,15 +42,39 @@ void setup() {
 }
 
 void draw() {
+  if (record) {
+    beginRecord(PDF, "testo2-####.pdf");
+  }
   // Draw something good here
   //noLoop();
   //fill(255,0,0);//we fill following with red  
   //ellipse(random(width),random(height),10,10);//randomly placed circle
   if (keyPressed) {
     if (key == ' ') {
-       //clear();
-       background(#EDD7A0);
-       //pushMatrix();
+      pattern();
+      }
+   }
+   
+    if (record) {
+      endRecord();
+        record = false;
+    }
+}
+
+void keyPressed() {
+ //if (key == 's' || key == 'S') {
+    record = true;
+       //endRecord();
+       //setup();
+  //}
+// Use a keypress so thousands of files aren't created
+//void keyPressed() {
+//   endRecord();
+//   setup();
+}
+
+void pattern() {
+        background(#EDD7A0);
         shapeMode(CENTER);
         for (int i = 0; i < 6; i = i+1) {
           shape(holly1, random(width),random(height));
@@ -67,20 +93,4 @@ void draw() {
           shape(star3, random(width),random(height));
           shape(star4, random(width),random(height));  
         }
-        //pushMatrix();
-        //endRecord();
-        //noLoop();
-      }
-    }
-}
-
-void keyPressed() {
- if (key == 's' || key == 'S') {
-       endRecord();
-       //setup();
-  }
-// Use a keypress so thousands of files aren't created
-//void keyPressed() {
-//   endRecord();
-//   setup();
 }
