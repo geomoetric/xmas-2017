@@ -46,7 +46,9 @@ void draw() {
   //ellipse(random(width),random(height),10,10);//randomly placed circle
   if (keyPressed) {
     if (key == ' ') {
-       pushMatrix();
+       //clear();
+       background(#EDD7A0);
+       //pushMatrix();
         shapeMode(CENTER);
         for (int i = 0; i < 6; i = i+1) {
           shape(holly1, random(width),random(height));
@@ -65,7 +67,8 @@ void draw() {
           shape(star3, random(width),random(height));
           shape(star4, random(width),random(height));  
         }
-        pushMatrix();
+        //pushMatrix();
+        //endRecord();
         //noLoop();
       }
     }
@@ -74,7 +77,7 @@ void draw() {
 void keyPressed() {
  if (key == 's' || key == 'S') {
        endRecord();
-       setup();
+       //setup();
   }
 // Use a keypress so thousands of files aren't created
 //void keyPressed() {
