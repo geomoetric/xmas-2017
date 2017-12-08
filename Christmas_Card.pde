@@ -36,7 +36,7 @@ void setup() {
   star2 = loadShape("star2.svg");
   star3 = loadShape("star3.svg");
   star4 = loadShape("star4.svg");
-  noLoop();
+  //noLoop();
 }
 
 void draw() {
@@ -66,6 +66,7 @@ void draw() {
           shape(star4, random(width),random(height));  
         }
         pushMatrix();
+        //noLoop();
       }
     }
 }
