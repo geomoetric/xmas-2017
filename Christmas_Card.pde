@@ -48,13 +48,13 @@ void setup() {
   p3 = new PVector(287, 203);
   p4 = new PVector(144, 203);
 
-  fig = fig7;
+  fig = fig6;
   //noLoop();
 }
 
 void draw() {
   if (record) {
-    beginRecord(PDF, "neue-####.pdf");
+    beginRecord(PDF, "boys-####.pdf");
   }
   if (keyPressed) {
     if (key == ' ') {
